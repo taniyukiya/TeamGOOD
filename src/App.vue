@@ -72,6 +72,3 @@ export default{
     height: 50vh;
   }
 </style>
-
-
-
