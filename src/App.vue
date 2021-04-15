@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>{{msg}}</p>
+    <p v-if="msg.length>0">{{msg}}</p>
+    <p v-else>dead</p>
     <input id="TextBox" type="text" v-model="msg">
   </div>
 </template>
