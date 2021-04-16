@@ -1,5 +1,5 @@
 <template>
     <div>
-        This is text writer!
+        GOOGLE NEWS
     </div>
 </template>
