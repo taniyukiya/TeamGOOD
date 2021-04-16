@@ -1,7 +1,5 @@
 <template>
   <div>
-     <myheader></myheader>
-     <news/>
     <p v-if="msg.length>0">
       {{msg}}
     </p>
@@ -15,18 +13,14 @@
 
 
 <script>
-import myheader from './components/myheader'
-import news from './components/news'
 
 export default{
-  components:{
-    myheader
-  },
-  data(){
-    return {
-      msg: "Hello World!"
-    }
-  },
+
+    name: 'news',
+    props:{
+        msg: String
+    },
+
   methods:{
     clear(){
       this.msg = ''
@@ -54,6 +48,11 @@ export default{
     });
   }
 }
+// const GoogleNewsRss = require('google-news-rss');
+// const googleNews = new GoogleNewsRss();
+// googleNews
+//    .search('japan')
+//    .then(resp => console.log(resp));
 </script>
 
 <style>
