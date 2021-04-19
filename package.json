@@ -9,11 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-<<<<<<< HEAD
-    "node": "^15.14.0",
-=======
     "google-news-rss": "^0.4.1",
->>>>>>> f88f387e785c2420d597176abd09721f23768280
     "vue": "^2.6.11"
   },
   "devDependencies": {

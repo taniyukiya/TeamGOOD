@@ -1,0 +1,16 @@
+#inputArea {
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+  }
+  #outputArea {
+    display: block;
+    flex-direction: colomn;
+    align-items: left;
+  }
+  #outputTextArea {
+    resize: none;
+    position: absolute;
+    height: 70vh;
+    width: 80vw;
+  }
