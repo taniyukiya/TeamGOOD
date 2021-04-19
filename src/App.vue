@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="outpuArea">
+    <div id="outputArea">
       <myheader></myheader>
       <ul>
         <li v-for="item in displayItems" :key="item">
