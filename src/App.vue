@@ -1,21 +1,26 @@
 <template>
   <div>
-    <div id="outputArea">
-      <myheader></myheader>
-      <ul>
-        <p>TOPIC:{{ topicName }}</p>
-        <li v-for="item in displayItems" :key="item.title">
-          {{ item.pubDate }}<br />
-          <a v-bind:href="item.link">{{ item.title }}</a>
-        </li>
-      </ul>
+    <div id="newsArea">
+      <div id="outputArea">
+        <myheader></myheader>
+        <ul>
+          <p>TOPIC:{{ topicName }}</p>
+          <li v-for="item in displayItems" :key="item.title">
+            {{ item.pubDate }}<br />
+            <a v-bind:href="item.link">{{ item.title }}</a>
+          </li>
+        </ul>
+      </div>
+      <div id="geoNewsArea">
+        <geoNews></geoNews>
+      </div>
     </div>
     <div id="inputArea">
       <input type="range" min="0" max="11" v-model="range" />
       <pulldownMenu :topicName.sync="topicName"></pulldownMenu>
       <pulldownMenuLang :topicLang.sync="topicLang"></pulldownMenuLang>
       <button @click="sortBy('title')">title</button>
-      <button @click="sortBy('isoDate')">isoDate</button>
+      <button @click="sortBy('isoDate')">Date</button>
       <p>"現在のソート："{{ sort_key }}:{{ sort_asc ? "昇順" : "降順" }}</p>
     </div>
   </div>
@@ -23,12 +28,14 @@
 
 <script>
 import myheader from "./components/myheader";
+import geoNews from "./components/geo_news";
 import pulldownMenu from "./components/pulldown_menu";
 import pulldownMenuLang from "./components/pulldown_menu_lang";
 
 export default {
   components: {
     myheader,
+    geoNews,
     pulldownMenu,
     pulldownMenuLang
   },
@@ -133,4 +140,18 @@ export default {
   height: 70vh;
   width: 80vw;
 }
+#newsArea{
+  display: flex;
+}
+#outputArea{
+  position: absolute;
+  width: 40vw;
+}
+#geoNewsArea{
+  position: absolute;
+  right: 5vw;
+  height: 80vh;
+  width: 40vw;
+} 
+
 </style>

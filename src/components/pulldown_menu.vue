@@ -27,7 +27,6 @@ export default {
         { id: 5, name: "ENTERTAINMENT" },
         { id: 6, name: "SPORTS" },
         { id: 7, name: "SCIENCE" },
-        { id: 8, name: "HEALTH" },
       ],
     };
   },
