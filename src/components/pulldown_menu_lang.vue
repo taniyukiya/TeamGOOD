@@ -1,13 +1,13 @@
 <template>
   <div>
     <select v-model="selectedLang" @change="changeFromChild">
-      <option disabled value="">Topic</option>
+      <option disabled value="">Language</option>
       <option
         v-for="lang in optionLanguage"
         v-bind:value="lang.name"
         v-bind:key="lang.id"
       >
-        {{ lang.name }}
+        {{ lang.outputTag }}
       </option>
     </select>
   </div>
@@ -20,8 +20,8 @@ export default {
     return {
       selectedLang: "jpn",
       optionLanguage: [
-        { id: 1, name: "jpn" },
-        { id: 2, name: "eng" },
+        { id: 1, name: "jpn" , outputTag: "日本語"},
+        { id: 2, name: "eng" , outputTag: "English"},
       ],
     };
   },
