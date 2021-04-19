@@ -1,7 +1,7 @@
 <template>
   <div>
     <myheader></myheader>
-    <news v-bind:msg="WORLD"></news>
+    <news v-bind:selectTopic="WORLD"></news>
   </div>
 </template>
 
@@ -17,6 +17,8 @@ export default {
   data() {
     return {
       msg: "WORLD",
+      selectTopic:"WORLD"
+
     };
   },
 };

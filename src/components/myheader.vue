@@ -1,5 +1,5 @@
 <template>
     <div>
-        へっだー
+        ニュースサイトTeamGOOD
     </div>
 </template>>
