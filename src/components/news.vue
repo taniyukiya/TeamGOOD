@@ -36,20 +36,19 @@ data() {
         return this.items.slice(0,this.rangeNum);
     },
 
-    // sort_items(){
-    //   if (this.sort_key != "")
-    //   {
-    //      this.title.sort((a,b)=> {
-    //     if (a[this.sort_key]<b[this.sort_key]) return -1;
-    //     if (a[this.sort_key]<b[this.sort_key]) return 1;
-    //       return 0;
-    //   });
-    //   return this.title;
-    // }else {
-    //   return this.title;
-    //   }
-    // },
-
+     sort_items(){
+       if (this.sort_key != "")
+       {
+          this.items.slice().sort((a,b)=> {
+         if (a[this.sort_key] < b[this.sort_key]) return -1;
+         if (a[this.sort_key] > b[this.sort_key]) return 1;
+          return 0;
+     });
+       return this.items;
+     }else {
+       return this.items;
+       }
+     },
   },
 
   methods:{
